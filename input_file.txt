@@ -1,0 +1,3 @@
+hello this is vishnu trying hadoop using mapreduce 
+this experiment is executed using ubuntu
+so lets try it out

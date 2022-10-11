@@ -1,0 +1,12 @@
+Start-all.sh
+hadoop fs -mkdir /input_dir
+hadoop fs -put input_file.txt /input_dir
+hadoop fs -ls /input_dir/
+hadoop dfs -cat /input_dir/input_file.txt
+hadoop jar WordCount.jar  /input_dir /output_dir
+hadoop dfs -cat /output_dir/*
+
+hadoop dfsadmin –safemode leave
+hadoop fs -rm -r /iutput_dir/input_file.txt
+hadoop fs -rm -r /iutput_dir
+stop-all.sh
